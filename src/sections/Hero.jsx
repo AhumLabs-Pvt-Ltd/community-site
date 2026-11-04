@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ORG_URL } from "../content.js";
+import { hero } from "../content.js";
 
 export default function Hero() {
   return (
@@ -11,16 +11,15 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Ahum
+          {hero.title}
         </motion.h1>
-        <p className="mt-4 max-w-2xl text-xl text-foam/80">
-          Placeholder: an open developer community for maritime software.
-        </p>
+        <p className="mt-4 max-w-2xl text-xl font-medium">{hero.tagline}</p>
+        <p className="mt-4 max-w-2xl text-lg text-foam/80">{hero.body}</p>
         <a
-          href={ORG_URL}
+          href={hero.cta.href}
           className="mt-8 inline-block rounded bg-signal px-5 py-3 font-medium text-white"
         >
-          See the code on GitHub
+          {hero.cta.label}
         </a>
       </div>
     </header>

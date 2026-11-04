@@ -3,8 +3,8 @@
 The landing page for the Ahum open maritime developer community. Built with React, Vite,
 Tailwind CSS and Framer Motion, in plain JavaScript.
 
-This is a skeleton. Every section has placeholder text. What the finished page should say
-and look like will be written in [BRIEF.md](BRIEF.md).
+The page copy is in place (`src/content.js`). Layout and styling are still basic; design
+direction will be written in [BRIEF.md](BRIEF.md).
 
 ## 10-minute quickstart
 

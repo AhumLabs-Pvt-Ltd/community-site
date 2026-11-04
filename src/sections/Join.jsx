@@ -1,13 +1,19 @@
 import Section from "./Section.jsx";
-import { ORG_URL } from "../content.js";
+import { join } from "../content.js";
 
 // No sign-up forms here. Do not collect personal data until there is a privacy policy.
 export default function Join() {
   return (
-    <Section id="join" title="Join the community">
-      <p>Placeholder: how to get involved. For now, start on GitHub.</p>
-      <a href={ORG_URL} className="mt-4 inline-block font-medium text-sea underline">
-        Find a good first issue
+    <Section id="join" title={join.title}>
+      <ol className="list-decimal space-y-3 pl-6">
+        {join.steps.map((step) => (
+          <li key={step.title}>
+            <strong className="font-semibold text-ink">{step.title}</strong> {step.body}
+          </li>
+        ))}
+      </ol>
+      <a href={join.cta.href} className="mt-6 inline-block font-medium text-sea underline">
+        {join.cta.label}
       </a>
     </Section>
   );

@@ -32,7 +32,7 @@ pnpm preview    # serve the production build
 
 ## Rules
 
-- Follow `BRIEF.md` for copy and design once it is filled in. Until then keep placeholders.
+- Copy is final in `src/content.js`; change it only when asked. Follow `BRIEF.md` for design once it is filled in.
 - Page text goes in `src/content.js`; sections go in `src/sections/`.
 - JavaScript (`.jsx`), not TypeScript. Tailwind classes for styling. Framer Motion for
   animation; respect `prefers-reduced-motion` when adding larger animations.

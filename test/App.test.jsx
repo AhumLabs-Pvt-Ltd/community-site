@@ -20,3 +20,10 @@ it("has no forms that could collect personal data", () => {
   const { container } = render(<App />);
   expect(container.querySelector("form, input, textarea, select")).toBeNull();
 });
+
+it("shows the build day and join copy", () => {
+  render(<App />);
+  expect(screen.getByText(/No maritime background needed/)).toBeInTheDocument();
+  expect(screen.getAllByRole("listitem").length).toBeGreaterThanOrEqual(11);
+  expect(screen.getByRole("link", { name: "Find a good first issue" })).toBeInTheDocument();
+});
