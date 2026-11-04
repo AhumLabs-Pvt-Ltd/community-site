@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
 
-/** Shared wrapper: fades each section in once as it scrolls into view. */
+/** Shared wrapper: each section settles in once as it scrolls into view. */
 export default function Section({ id, title, children }) {
   return (
     <motion.section
       id={id}
       aria-labelledby={`${id}-title`}
-      className="mx-auto max-w-5xl px-4 py-20"
-      initial={{ opacity: 0, y: 24 }}
+      className="mx-auto max-w-5xl px-4 py-16"
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.45 }}
     >
-      <h2 id={`${id}-title`} className="text-3xl font-semibold tracking-tight">
+      <h2 id={`${id}-title`} className="text-5xl">
         {title}
       </h2>
-      <div className="mt-6 text-lg leading-relaxed text-ink/80">{children}</div>
+      <div className="mt-6 leading-relaxed">{children}</div>
     </motion.section>
   );
 }

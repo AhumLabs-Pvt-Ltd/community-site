@@ -1,13 +1,38 @@
+@import "@fontsource/gochi-hand/400.css";
+@import "@fontsource/shantell-sans/400.css";
+@import "@fontsource/shantell-sans/600.css";
+@import "@fontsource/shantell-sans/700.css";
 @import "tailwindcss";
+@import "./handdrawn/handdrawn.css";
 
-/* Placeholder theme. Replace with the final colours and fonts from BRIEF.md. */
-@theme {
-  --color-ink: #0b1b2b;
-  --color-sea: #0e4c6d;
-  --color-foam: #f4f8fb;
-  --color-signal: #e4572e;
+/* Tailwind names for the hand-drawn kit's tokens, so they flip with dark mode. */
+@theme inline {
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-paper: var(--paper);
+  --color-paper2: var(--paper2);
+  --color-wash: var(--wash);
+  --color-accent: var(--accent);
+  --font-display: var(--display);
+  --font-body: var(--body);
 }
 
-body {
-  @apply bg-foam text-ink antialiased;
+.hd-page {
+  font-size: 17px;
+}
+
+/* The "Ahum" wordmark: the one place the logo gradient is allowed, with an ink outline. */
+.wordmark {
+  font-family: var(--display);
+  background: linear-gradient(90deg, var(--logo-red), var(--logo-purple), var(--logo-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--ink);
+}
+
+.drawing svg {
+  display: block;
+  width: 100%;
+  height: auto;
 }

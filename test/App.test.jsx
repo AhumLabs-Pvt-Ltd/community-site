@@ -27,3 +27,10 @@ it("shows the build day and join copy", () => {
   expect(screen.getAllByRole("listitem").length).toBeGreaterThanOrEqual(11);
   expect(screen.getByRole("link", { name: "Find a good first issue" })).toBeInTheDocument();
 });
+
+it("starts with sound off and shows the empty contributors state", () => {
+  render(<App />);
+  expect(screen.getByRole("button", { name: "Sound: off" })).toBeInTheDocument();
+  expect(screen.getByText(/No names here yet/)).toBeInTheDocument();
+  expect(screen.getByRole("img", { name: /fox in a captain's cap/ })).toBeInTheDocument();
+});
