@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* Placeholder theme. Replace with the final colours and fonts from BRIEF.md. */
+@theme {
+  --color-ink: #0b1b2b;
+  --color-sea: #0e4c6d;
+  --color-foam: #f4f8fb;
+  --color-signal: #e4572e;
+}
+
+body {
+  @apply bg-foam text-ink antialiased;
+}
