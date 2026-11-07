@@ -14,7 +14,12 @@ export default function BuildDays() {
             </p>
           ))}
         </div>
-        <Drawing viewBox="0 0 320 164" scene={buildDaysScene} className="hd-card hr3" />
+        <Drawing
+          viewBox="0 0 320 164"
+          scene={buildDaysScene}
+          label="Three critters working together at a table with laptops, planning a build day."
+          className="hd-card hr3"
+        />
       </div>
     </Section>
   );
