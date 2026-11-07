@@ -3,7 +3,13 @@
 export default function Drawing({ viewBox, scene, className = "", label }) {
   return (
     <div className={`drawing ${className}`}>
-      <svg viewBox={viewBox} role={label ? "img" : undefined} aria-label={label} aria-hidden={label ? undefined : true}>
+      <svg
+        viewBox={viewBox}
+        role={label ? "img" : undefined}
+        aria-label={label}
+        aria-hidden={label ? undefined : true}
+        focusable="false"
+      >
         <g className="sk" dangerouslySetInnerHTML={{ __html: scene }} />
       </svg>
     </div>
