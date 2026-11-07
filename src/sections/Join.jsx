@@ -14,7 +14,13 @@ export default function Join() {
               {i + 1}
             </span>
             <h3 className="text-3xl">{step.title}</h3>
-            <p className="mt-1 text-muted">{step.body}</p>
+            {step.href ? (
+              <a href={step.href} className="mt-1 block text-muted underline">
+                {step.body}
+              </a>
+            ) : (
+              <p className="mt-1 text-muted">{step.body}</p>
+            )}
           </li>
         ))}
       </ol>
