@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#F5F3EC"/>
+  <g fill="#D9D3C4">
+    <circle cx="30" cy="30" r="3"/><circle cx="90" cy="30" r="3"/><circle cx="150" cy="30" r="3"/>
+    <circle cx="210" cy="30" r="3"/><circle cx="270" cy="30" r="3"/><circle cx="330" cy="30" r="3"/>
+    <circle cx="390" cy="30" r="3"/><circle cx="450" cy="30" r="3"/><circle cx="510" cy="30" r="3"/>
+    <circle cx="570" cy="30" r="3"/><circle cx="630" cy="30" r="3"/><circle cx="690" cy="30" r="3"/>
+    <circle cx="750" cy="30" r="3"/><circle cx="810" cy="30" r="3"/><circle cx="870" cy="30" r="3"/>
+    <circle cx="930" cy="30" r="3"/><circle cx="990" cy="30" r="3"/><circle cx="1050" cy="30" r="3"/>
+    <circle cx="1110" cy="30" r="3"/><circle cx="1170" cy="30" r="3"/>
+    <circle cx="30" cy="600" r="3"/><circle cx="90" cy="600" r="3"/><circle cx="150" cy="600" r="3"/>
+    <circle cx="210" cy="600" r="3"/><circle cx="270" cy="600" r="3"/><circle cx="330" cy="600" r="3"/>
+    <circle cx="390" cy="600" r="3"/><circle cx="450" cy="600" r="3"/><circle cx="510" cy="600" r="3"/>
+    <circle cx="570" cy="600" r="3"/><circle cx="630" cy="600" r="3"/><circle cx="690" cy="600" r="3"/>
+    <circle cx="750" cy="600" r="3"/><circle cx="810" cy="600" r="3"/><circle cx="870" cy="600" r="3"/>
+    <circle cx="930" cy="600" r="3"/><circle cx="990" cy="600" r="3"/><circle cx="1050" cy="600" r="3"/>
+    <circle cx="1110" cy="600" r="3"/><circle cx="1170" cy="600" r="3"/>
+  </g>
+  <rect x="70" y="120" width="1060" height="390" fill="#FFFDF7" stroke="#1F1D1A" stroke-width="6"
+        rx="40" style="stroke-linejoin:round"/>
+  <defs>
+    <linearGradient id="ahumGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E8262B"/>
+      <stop offset="0.5" stop-color="#8B3FD9"/>
+      <stop offset="1" stop-color="#3D5AF1"/>
+    </linearGradient>
+  </defs>
+  <text x="600" y="310" text-anchor="middle" font-family="'Gochi Hand','Comic Sans MS',cursive"
+        font-size="200" font-weight="400"
+        fill="url(#ahumGrad)" stroke="#1F1D1A" stroke-width="6">Ahum</text>
+  <text x="600" y="430" text-anchor="middle" font-family="'Shantell Sans',system-ui,sans-serif"
+        font-size="48" fill="#6E695F">Open maritime developer community</text>
+  <g transform="translate(230,300) scale(1.6)">
+    <ellipse cx="0" cy="0" rx="52" ry="40" fill="#CBA780" stroke="#1F1D1A" stroke-width="5"/>
+    <circle cx="-26" cy="-18" r="14" fill="#CBA780" stroke="#1F1D1A" stroke-width="5"/>
+    <circle cx="26" cy="-18" r="14" fill="#CBA780" stroke="#1F1D1A" stroke-width="5"/>
+    <circle cx="-26" cy="-18" r="5" fill="#1F1D1A"/>
+    <circle cx="26" cy="-18" r="5" fill="#1F1D1A"/>
+    <circle cx="-26" cy="-18" r="2" fill="#FFFDF7"/>
+    <circle cx="26" cy="-18" r="2" fill="#FFFDF7"/>
+    <ellipse cx="0" cy="6" rx="9" ry="6" fill="#1F1D1A"/>
+  </g>
+  <g transform="translate(970,300) scale(1.6)">
+    <path d="M -30,-10 L -50,-55 L -12,-25 Z" fill="#F2B07A" stroke="#1F1D1A" stroke-width="5"/>
+    <path d="M 30,-10 L 50,-55 L 12,-25 Z" fill="#F2B07A" stroke="#1F1D1A" stroke-width="5"/>
+    <ellipse cx="0" cy="8" rx="45" ry="38" fill="#F2B07A" stroke="#1F1D1A" stroke-width="5"/>
+    <circle cx="-16" cy="0" r="6" fill="#1F1D1A"/>
+    <circle cx="16" cy="0" r="6" fill="#1F1D1A"/>
+    <ellipse cx="0" cy="16" rx="8" ry="5" fill="#1F1D1A"/>
+    <path d="M -8,22 q8,10 16,0" fill="none" stroke="#1F1D1A" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>
