@@ -91,4 +91,6 @@ export const footer = {
 
 // Add yourself here in your pull request: { name: "Name or handle", url: "https://..." }.
 // Use only the name or handle you want to be public. No emails, ages, schools or locations.
-export const contributors = [];
+export const contributors = [
+  { name: "mafujahmedridoy22-commits", url: "https://github.com/mafujahmedridoy22-commits" },
+];
