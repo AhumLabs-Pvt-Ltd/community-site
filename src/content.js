@@ -71,7 +71,8 @@ export const join = {
     },
     {
       title: "Join the conversation.",
-      body: "Our community lives on WhatsApp. Ask us on GitHub Discussions for an invite.",
+      body: "The community talks in GitHub Discussions. Come say hi.",
+      href: "https://github.com/AhumLabs-Pvt-Ltd/.github/discussions",
     },
     {
       title: "Bring what you know.",
