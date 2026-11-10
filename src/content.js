@@ -1,6 +1,7 @@
 // All page text lives here so it is easy to change without touching layout.
 
 export const ORG_URL = "https://github.com/AhumLabs-Pvt-Ltd";
+export const COMPANY_URL = "https://ahumlabs.com";
 export const GOOD_FIRST_ISSUES_URL = `${ORG_URL}`;
 
 export const hero = {
@@ -83,7 +84,7 @@ export const join = {
 export const footer = {
   contributorsTitle: "Contributors",
   credit: "Ahum is run by",
-  creditLink: { label: "Ahum Labs", href: ORG_URL },
+  creditLink: { label: "Ahum Labs", href: COMPANY_URL },
   licence: "Code licensed under Apache-2.0. Knowledge content licensed under CC BY 4.0.",
 };
 
