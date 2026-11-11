@@ -63,3 +63,6 @@ export const buildDaysScene = `
 
 // Empty contributors list.
 export const sleepingOwl = `${poke(60, 46, 1, critter("owl", "sleep", props.mug()))}${ground(10, 110, 112)}`;
+
+// Contributors listed: the same owl, awake now, keeping watch over the names.
+export const wakingOwl = `${poke(60, 46, 1, critter("owl", "work", props.mug()))}${ground(10, 110, 112)}`;
