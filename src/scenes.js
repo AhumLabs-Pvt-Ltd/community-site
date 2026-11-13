@@ -18,13 +18,19 @@ function boat(cx, deck, w) {
     <path class="ln wood" d="M${cx - w},${deck} C${cx - w * 0.4},${deck + 4} ${cx + w * 0.4},${deck + 4} ${cx + w},${deck} C${cx + w * 0.85},${deck + w * 0.4} ${cx + w * 0.5},${deck + w * 0.5} ${cx},${deck + w * 0.5} C${cx - w * 0.5},${deck + w * 0.5} ${cx - w * 0.85},${deck + w * 0.4} ${cx - w},${deck} Z"/>`;
 }
 
-// Water: a soft fill with only the wavy surface inked, plus one short ripple.
-function sea(w, y) {
-  const q = (t) => (w * t).toFixed(0);
-  const wave = `M0,${y} C${q(0.12)},${y - 8} ${q(0.25)},${y + 8} ${q(0.38)},${y} C${q(0.5)},${y - 8} ${q(0.63)},${y + 8} ${q(0.75)},${y} C${q(0.87)},${y - 8} ${q(0.95)},${y + 6} ${w},${y}`;
-  return `<path class="skyf" d="${wave} L${w},${y + 50} L0,${y + 50} Z"/>
+// Water: a hand-drawn patch from x1 to x2. The wavy surface is inked bold, the loose
+// rounded bottom thin, so it reads as a sketched pond rather than a cropped box. Two
+// short static ripples.
+function sea(x1, x2, y, bot) {
+  const w = x2 - x1;
+  const q = (t) => (x1 + w * t).toFixed(0);
+  const wave = `M${x1},${y} C${q(0.12)},${y - 8} ${q(0.25)},${y + 8} ${q(0.38)},${y} C${q(0.5)},${y - 8} ${q(0.63)},${y + 8} ${q(0.75)},${y} C${q(0.87)},${y - 8} ${q(0.95)},${y + 6} ${x2},${y}`;
+  const edge = `C${x2 + 6},${y + 18} ${x2 - 14},${bot - 4} ${x2 - 60},${bot - 1} C${q(0.6)},${bot + 3} ${q(0.35)},${bot - 3} ${x1 + 60},${bot} C${x1 + 14},${bot} ${x1 - 6},${y + 20} ${x1},${y}`;
+  return `<path class="skyf" d="${wave} ${edge} Z"/>
     <path class="ln nf" d="${wave}"/>
-    <path class="ln thin nf" d="M${q(0.4)},${y + 22} q12,-6 24,0 q12,6 24,0"/>`;
+    <path class="ln thin nf" d="M${x2},${y} ${edge}"/>
+    <path class="ln thin nf" d="M${q(0.3)},${y + 22} q12,-6 24,0 q12,6 24,0"/>
+    <path class="ln thin nf" d="M${q(0.68)},${y + 34} q8,-4 16,0 q8,4 16,0"/>`;
 }
 
 // Hero: the fox captain codes on deck while the otter rides along. Only the fox works
@@ -33,7 +39,7 @@ export const heroScene = `
   ${boat(250, 196, 120)}
   ${poke(205, 152, 1, critter("fox", "work", props.cap() + props.laptop()), "bobwork")}
   ${poke(305, 160, 0.8, critter("otter", "work"))}
-  ${sea(500, 214)}`;
+  ${sea(118, 382, 214, 262)}`;
 
 // "What we're building": one critter per item, still apart from blinking.
 export const buildingScenes = [
