@@ -17,7 +17,7 @@ export default function Hero() {
         </a>
       </div>
       <Drawing
-        viewBox="110 40 280 210"
+        viewBox="110 40 280 228"
         scene={heroScene}
         label="A fox in a captain's cap codes on a small boat with an Ahum sail, an otter beside it."
       />
