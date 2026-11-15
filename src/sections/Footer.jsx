@@ -36,7 +36,7 @@ export default function Footer() {
         )}
         <p className="mt-6 text-sm text-muted">
           {footer.credit}{" "}
-          <a href={footer.creditLink.href} className="underline">
+          <a href={footer.creditLink.href} className="ink-link">
             {footer.creditLink.label}
           </a>
           . {footer.licence}
