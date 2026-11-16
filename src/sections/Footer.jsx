@@ -5,6 +5,29 @@ import { sleepingOwl, wakingOwl } from "../scenes.js";
 // Each name tag gets a slightly different wobbly border, like the cards elsewhere.
 const SHAPES = ["hr1", "hr3", "hr2"];
 
+// A long, loose pen line that sets the small print apart from the names above it, like a
+// rule drawn across the bottom of a notebook page. Static: it sits right next to text.
+function InkRule() {
+  return (
+    <svg
+      viewBox="0 0 600 10"
+      preserveAspectRatio="none"
+      className="mt-6 block h-2.5 w-full"
+      aria-hidden="true"
+      focusable="false"
+      fill="none"
+      stroke="var(--ink)"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+    >
+      <path
+        d="M2 6 C 80 3, 150 8, 230 5 C 310 2, 380 8, 460 5 C 520 3, 565 7, 598 4"
+        vectorEffect="non-scaling-stroke"
+      />
+    </svg>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="mx-auto max-w-5xl px-4 pt-8 pb-16">
@@ -34,7 +57,8 @@ export default function Footer() {
             <p className="text-muted">No names here yet. Yours could be the first.</p>
           </div>
         )}
-        <p className="mt-6 text-sm text-muted">
+        <InkRule />
+        <p className="mt-3 text-sm text-muted">
           {footer.credit}{" "}
           <a href={footer.creditLink.href} className="ink-link">
             {footer.creditLink.label}
