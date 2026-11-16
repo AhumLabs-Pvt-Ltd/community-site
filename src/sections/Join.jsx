@@ -42,7 +42,7 @@ export default function Join() {
             <StepNumber n={i + 1} />
             <h3 className="text-3xl">{step.title}</h3>
             {step.href ? (
-              <a href={step.href} className="mt-1 block text-muted underline">
+              <a href={step.href} className="ink-link mt-1 block">
                 {step.body}
               </a>
             ) : (
