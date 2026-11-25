@@ -4,6 +4,29 @@ import { sleepingOwl, wakingOwl } from "../scenes.js";
 
 // Each name tag gets a slightly different wobbly border, like the cards elsewhere.
 const SHAPES = ["hr1", "hr3", "hr2"];
+const TAG = "max-w-full min-w-0 border-2 border-ink bg-paper px-3 py-1 break-words";
+
+// A small pen arrow on name tags that link to a profile, the same mark the repository tiles
+// use, so the tag reads as a link. The whole tag is the link, which gives a bigger tap target.
+// Static: no motion next to text.
+function TagArrow() {
+  return (
+    <svg
+      viewBox="0 0 28 28"
+      className="h-3.5 w-3.5 shrink-0"
+      aria-hidden="true"
+      focusable="false"
+      fill="none"
+      stroke="var(--ink)"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M6 22 C 10 17, 15 12, 21.5 6.5" />
+      <path d="M12.5 6 C 15.5 6.3, 18.5 6.2, 22 6 C 21.7 9.5, 21.8 12.5, 22.2 15.5" />
+    </svg>
+  );
+}
 
 // A long, loose pen line that sets the small print apart from the names above it, like a
 // rule drawn across the bottom of a notebook page. Static: it sits right next to text.
@@ -42,11 +65,18 @@ export default function Footer() {
             />
             <ul className="flex min-w-0 flex-wrap gap-3">
               {contributors.map((c, i) => (
-                <li
-                  key={c.name}
-                  className={`max-w-full border-2 border-ink bg-paper px-3 py-1 break-words ${SHAPES[i % SHAPES.length]}`}
-                >
-                  {c.url ? <a href={c.url}>{c.name}</a> : c.name}
+                <li key={c.name} className="flex max-w-full">
+                  {c.url ? (
+                    <a
+                      href={c.url}
+                      className={`${TAG} ${SHAPES[i % SHAPES.length]} flex items-center gap-1.5 no-underline`}
+                    >
+                      <span className="min-w-0">{c.name}</span>
+                      <TagArrow />
+                    </a>
+                  ) : (
+                    <span className={`${TAG} ${SHAPES[i % SHAPES.length]}`}>{c.name}</span>
+                  )}
                 </li>
               ))}
             </ul>
