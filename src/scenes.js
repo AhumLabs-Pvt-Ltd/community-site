@@ -57,8 +57,23 @@ export const buildingScenes = [
    ${ground(20, 180, 118)}`,
 ];
 
-// Build days: three critters at one table, laptops out.
+// A string of little pennant flags sagging between x1 and x2, hung from y. Static.
+// Colours repeat the critters' own: sky, the beaver's hard hat, the parrot's green.
+function bunting(x1, x2, y, sag, n) {
+  const at = (t) => [x1 + (x2 - x1) * t, y + 4 * sag * t * (1 - t)];
+  const fills = ["skyf", "hat", "leaf"];
+  let flags = "";
+  for (let i = 0; i < n; i++) {
+    const [x, fy] = at((i + 1) / (n + 1));
+    const p = (v) => v.toFixed(1);
+    flags += `<path class="ln thin ${fills[i % 3]}" d="M${p(x - 6)},${p(fy)} L${p(x + 6)},${p(fy)} L${p(x)},${p(fy + 11)} Z"/>`;
+  }
+  return `<path class="ln thin nf" d="M${x1},${y} Q${(x1 + x2) / 2},${y + 2 * sag} ${x2},${y}"/>${flags}`;
+}
+
+// Build days: three critters at one table, laptops out, bunting strung up above them.
 export const buildDaysScene = `
+  ${bunting(18, 302, 6, 10, 11)}
   ${poke(70, 66, 0.9, critter("fox", "work", props.cap()))}
   ${poke(160, 66, 0.9, critter("beaver", "work", props.hardhat()))}
   ${poke(250, 66, 0.9, critter("parrot", "work"))}
