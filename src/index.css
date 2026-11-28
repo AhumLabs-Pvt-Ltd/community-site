@@ -51,3 +51,9 @@
 .ink-link:hover {
   text-decoration-thickness: 2.5px;
 }
+
+/* Repo tiles lift and tilt on hover (from the kit). Give keyboard users the same lift when a
+   tile has focus, alongside the dashed focus outline. Reduced motion still turns it off. */
+.hd-tile:focus-visible {
+  transform: rotate(-0.7deg) translateY(-3px);
+}
