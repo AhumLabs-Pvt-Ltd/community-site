@@ -57,12 +57,10 @@ export default function Footer() {
       <div className="hd-card hr2">
         <h2 className="text-4xl">{footer.contributorsTitle}</h2>
         {contributors.length > 0 ? (
-          <div className="mt-3 flex items-center gap-4">
-            <Drawing
-              viewBox="0 0 120 120"
-              scene={wakingOwl}
-              className="hidden w-20 shrink-0 sm:block"
-            />
+          // On narrow screens the owl sits above the name tags instead of beside them, so the
+          // card keeps its animal without squeezing long handles onto two lines.
+          <div className="mt-3 flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-4">
+            <Drawing viewBox="0 0 120 120" scene={wakingOwl} className="w-16 shrink-0 sm:w-20" />
             <ul className="flex min-w-0 flex-wrap gap-3">
               {contributors.map((c, i) => (
                 <li key={c.name} className="flex max-w-full">
